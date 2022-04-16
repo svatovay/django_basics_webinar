@@ -7,3 +7,4 @@ def index(request):
 
 def contacts(request):
     return render(request, 'geekshop/contact.html')
+
