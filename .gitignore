@@ -1,6 +1,6 @@
 
 geekshop/geekshop/__pycache__/
 
-mainapp/__pycache__/
+geekshop/mainapp/__pycache__/
 
-mainapp/migrations/__pycache__/
+geekshop/mainapp/migrations/__pycache__/
