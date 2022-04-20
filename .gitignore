@@ -4,3 +4,5 @@ geekshop/geekshop/__pycache__/
 geekshop/mainapp/__pycache__/
 
 geekshop/mainapp/migrations/__pycache__/
+
+geekshop/.dbeaver/
