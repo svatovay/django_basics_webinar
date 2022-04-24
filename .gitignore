@@ -13,3 +13,5 @@ geekshop/mainapp/__pycache__/
 geekshop/mainapp/migrations/__pycache__/
 
 geekshop/.dbeaver/
+
+geekshop/authapp/__pycache__/
