@@ -3,6 +3,17 @@ geekshop/geekshop/__pycache__/
 
 geekshop/mainapp/__pycache__/
 
+<<<<<<< Updated upstream
+=======
+mainapp/migrations/__pycache__/
+
+geekshop/mainapp/__pycache__/
+
+>>>>>>> Stashed changes
 geekshop/mainapp/migrations/__pycache__/
 
 geekshop/.dbeaver/
+
+geekshop/authapp/__pycache__/
+
+geekshop/mainapp/management/commands/__pycache__/
