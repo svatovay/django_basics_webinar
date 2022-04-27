@@ -18,50 +18,28 @@
               Категория: "{{ category.name|title }}"
             </h2>
           </div>
-            {% for product in products %}
-                <div class="block">
-                    <a href="#"><img src="/media/{{ product.image }}" alt="">
-                        <div class="text">
-                            <img src="static/geekshop/img/icon-hover.png" alt="img">
-                            <h4>{{ product.name }}</h4>
-                            <p>{{ product.short_desc }}</p>
-                        </div>
-                    </a>
-                </div>
-            {% endfor %}
+            <div class="category-products clearfix">
+                {% for product in products %}
+                    <div class="block">
+                        <a href="{% url 'basket:add' product.pk %}">
+                            <img src="/media/{{ product.image }}" alt="{{ product.short_desc }}">
+                            <div class="text">
+                                <img src="static/geekshop/img/icon-hover.png" alt="hover">
+                                <h4>{{ product.name }}</h4>
+                                <p>{{ product.short_desc }}</p>
+                            </div>
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
         </div>
         </div>
 
 		<div class="clr"></div>
 
-	</div>	
-
 	<div class="footer">
-        <div class="clearfix">
-            <div class="text-footer">
-                <h3>контакты</h3>
-            </div>
-            <div class="text-footer">
-                <h3>полезная информация</h3>
-            </div>
-            <div class="text-footer clearfix">
-                <h3>Оставайтесь на связи</h3>
-                <p>Подписаться на новости и рассылки</p>
-                <form>
-                    <input type="email" name="email" placeholder="ваш email">
-                    <a href="#"><i class="fa fa-paper-plane fa-2x" aria-hidden="true"></i></a>
-                </form>
-            </div>
-        </div>
-        <p class="small">&copy; GB 2017</p>
-        <div class="social">
-            <a href="#" class="social1"></a>
-            <a href="#" class="social2"></a>
-            <a href="#" class="social3"></a>
-            <a href="#" class="social4"></a>
-        </div>
-        <p class="small">Положения &amp; Условия  /  Конфиденциальность &amp; Cookies</p>
-    </div>	
+        {% include 'geekshop/includes/inc_footer.html' %}
+    </div>
 
 </body>
 </html>

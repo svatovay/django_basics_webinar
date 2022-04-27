@@ -17,3 +17,9 @@ geekshop/.dbeaver/
 geekshop/authapp/__pycache__/
 
 geekshop/mainapp/management/commands/__pycache__/
+
+geekshop/basketapp/__pycache__/
+
+geekshop/basketapp/migrations/__pycache__/
+
+geekshop/db.sqlite3

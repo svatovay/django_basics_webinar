@@ -26,6 +26,7 @@ urlpatterns = [
 
     path('products/', include('mainapp.urls', namespace='products')),
     path('auth/', include('authapp.urls', namespace='auth')),
+    path('basketapp/', include('basketapp.urls', namespace='basket')),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
