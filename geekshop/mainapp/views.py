@@ -1,6 +1,22 @@
+import random
 from django.shortcuts import render, get_object_or_404
 from mainapp.models import ProductCategory, Product
 from basketapp.models import Basket
+
+
+def get_basket(user):
+    return Basket.objects.filter(user=user) if user.is_authenticated else []
+
+
+def get_hot_product():
+    products = Product.objects.all()
+
+    return random.sample([products], 1)[0]
+
+
+def get_same_products(hot_product):
+    same_products = Product.objects.filter(category=hot_product.category).exclude(pk=hot_product.pk)[:3]
+    return same_products
 
 
 def products(request, pk=None):
@@ -8,9 +24,7 @@ def products(request, pk=None):
 
     title = 'продукты'
     links_menu = ProductCategory.objects.all()
-    basket = []
-    if request.user.is_authenticated:
-        basket = Basket.objects.filter(user=request.user)
+    basket = get_basket(request.user)
 
     if pk is not None:
 
@@ -31,6 +45,7 @@ def products(request, pk=None):
 
         return render(request, 'mainapp/products_list.html', context=context)
 
+    hot_product = get_hot_product()
     same_products = Product.objects.all()[3:5]
 
     context = {
