@@ -23,3 +23,5 @@ geekshop/basketapp/__pycache__/
 geekshop/basketapp/migrations/__pycache__/
 
 geekshop/db.sqlite3
+
+geekshop/media/

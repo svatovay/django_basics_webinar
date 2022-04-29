@@ -1,5 +1,5 @@
 import random
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, HttpResponseRedirect
 from mainapp.models import ProductCategory, Product
 from basketapp.models import Basket
 
@@ -55,3 +55,19 @@ def products(request, pk=None):
     }
 
     return render(request, 'mainapp/products.html', context=context)
+
+
+def product(request, pk):
+    title = 'детали продукта'
+    links_menu = ProductCategory.objects.all()
+    product = get_object_or_404(Product, pk=pk)
+    basket = get_basket(request.user)
+
+    context = {
+        'title': title,
+        'links_menu': links_menu,
+        'product': product,
+        'basket': basket,
+    }
+
+    return render(request, 'mainapp/product.html', context=context)
