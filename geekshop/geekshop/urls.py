@@ -20,7 +20,7 @@ from django.conf.urls.static import static
 from .views import index, contacts
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin/', include('adminapp.urls', namespace='admin')),
     path('', index, name='index'),
     path('contacts/', contacts, name='contacts'),
 
