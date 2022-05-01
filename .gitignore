@@ -25,3 +25,7 @@ geekshop/basketapp/migrations/__pycache__/
 geekshop/db.sqlite3
 
 geekshop/media/
+
+geekshop/adminapp/__pycache__/
+
+geekshop/adminapp/migrations/__pycache__/
