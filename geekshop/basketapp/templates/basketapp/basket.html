@@ -21,7 +21,7 @@
             <span class="product_cost">
                 {{ item.cost }}&nbspруб
             </span>
-            <button class="btn btn-round">
+            <button class="btn">
                 <a href="{% url 'basket:remove' item.pk %}" class="">
                     удалить
                 </a>
@@ -36,7 +36,7 @@
         </div>
     {% endif %}
 
-        <button class="btn btn-round">
+        <button class="btn btn-red">
             <a href="{% url 'index' %}">
                 на главную
             </a>
