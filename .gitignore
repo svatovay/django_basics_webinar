@@ -29,3 +29,11 @@ geekshop/media/
 geekshop/adminapp/__pycache__/
 
 geekshop/adminapp/migrations/__pycache__/
+
+geekshop/mainapp/static/mainapp/img/
+
+geekshop/adminapp/static/adminapp/img/
+
+geekshop/authapp/static/authapp/img/
+
+geekshop/basketapp/static/basketapp/img/
