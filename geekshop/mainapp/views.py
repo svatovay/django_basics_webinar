@@ -37,7 +37,8 @@ def products(request, pk=None, page=1):
             products = Product.objects.filter(is_active=True, category__is_active=True).order_by('price')
         else:
             category = get_object_or_404(ProductCategory, pk=pk)
-            products = Product.objects.filter(category__pk=pk, is_active=True, category__is_active=True).order_by('price')
+            products = Product.objects.filter(category__pk=pk, is_active=True, category__is_active=True).order_by(
+                'price')
 
         paginator = Paginator(products, 2)
         try:
@@ -52,7 +53,6 @@ def products(request, pk=None, page=1):
             'links_menu': links_menu,
             'category': category,
             'products': products_paginator,
-            'basket': basket,
         }
 
         return render(request, 'mainapp/products_list.html', context=context)
@@ -65,7 +65,6 @@ def products(request, pk=None, page=1):
         'links_menu': links_menu,
         'hot_product': hot_product,
         'same_products': same_products,
-        'basket': basket,
     }
 
     return render(request, 'mainapp/products.html', context=context)
@@ -81,7 +80,6 @@ def product(request, pk):
         'title': title,
         'links_menu': links_menu,
         'product': product,
-        'basket': basket,
     }
 
     return render(request, 'mainapp/product.html', context=context)
