@@ -39,3 +39,5 @@ geekshop/authapp/static/authapp/img/
 geekshop/basketapp/static/basketapp/img/
 
 geekshop/.env
+
+geekshop/authapp/migrations/__pycache__/
