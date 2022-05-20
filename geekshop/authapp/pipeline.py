@@ -6,7 +6,7 @@ import requests
 from django.utils import timezone
 from social_core.exceptions import AuthForbidden
 
-from authapp.models import ShopUserProfile
+from authapp.models import ShopUser, ShopUserProfile
 
 
 def save_user_profile(backend, user, response, *args, **kwargs):
@@ -42,6 +42,8 @@ def save_user_profile(backend, user, response, *args, **kwargs):
         if age < 18:
             user.delete()
             raise AuthForbidden('social_core.backends.vk.VKOAuth2')
+
+        user.age = age
 
     user.save()
     print(f'!!!   {api_url}   !!!')
