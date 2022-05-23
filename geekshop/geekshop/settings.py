@@ -155,11 +155,7 @@ USE_TZ = False
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "geekshop"),
-    os.path.join(BASE_DIR, "adminapp"),
-    os.path.join(BASE_DIR, "authapp"),
-    os.path.join(BASE_DIR, "basketapp"),
-    os.path.join(BASE_DIR, "mainapp"),
+    os.path.join(BASE_DIR, "geekshop", "static"),
 )
 
 MEDIA_URL = '/media/'
