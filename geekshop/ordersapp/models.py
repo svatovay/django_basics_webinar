@@ -1,6 +1,7 @@
 from django.db import models
 
 from django.conf import settings
+
 from mainapp.models import Product
 
 
@@ -62,6 +63,10 @@ class OrderItem(models.Model):
     order = models.ForeignKey(Order, related_name="orderitems", on_delete=models.CASCADE)
     product = models.ForeignKey(Product, verbose_name='продукт', on_delete=models.CASCADE)
     quantity = models.PositiveIntegerField(verbose_name='количество', default=0)
+
+    @staticmethod
+    def get_item(pk):
+        return OrderItem.objects.filter(pk=pk).first()
 
     def get_product_cost(self):
         return self.product.price * self.quantity
