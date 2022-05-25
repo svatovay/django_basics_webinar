@@ -20,7 +20,7 @@ window.onload = function () {
         }
 
         $('.order_form').on('click', 'input[type=number]', function () {
-            var target = event.target;
+            let target = event.target;
 
             orderitem_num = parseInt(target.name.replace('orderitems-', '').replace('-quantity', ''));
             if (price_arr[orderitem_num]) {
@@ -33,7 +33,7 @@ window.onload = function () {
 
         $('.order_form').on('click', 'input[type=checkbox]', function () {
 
-            var target = event.target;
+            let target = event.target;
 
             orderitem_num = parseInt(target.name.replace('orderitems-', '').replace('-quantity', ''));
             if (target.checked) {
@@ -56,7 +56,7 @@ window.onload = function () {
     }
 
     function deleteOrderItem(row) {
-        var target_name = row[0].querySelector('input[type="number"]').name;
+        let target_name = row[0].querySelector('input[type="number"]').name;
         orderitem_num = parseInt(target_name.replace('orderitems-', '').replace('-quantity', ''));
         delta_quantity = -quantity_arr[orderitem_num];
         orderSummaryUpdate(price_arr[orderitem_num], delta_quantity);
@@ -70,7 +70,7 @@ window.onload = function () {
     });
 
     $('.order_form select').change(function () {
-        var target = event.target;
+        let target = event.target;
         console.log(target);
     })
 }
