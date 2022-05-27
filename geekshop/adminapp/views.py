@@ -59,7 +59,7 @@ class UsersListView(LoginRequiredMixin, ListView):
 class UserCreateView(LoginRequiredMixin, CreateView):
     model = ShopUser
     template_name = 'adminapp/user_update.html'
-    success_url = reverse_lazy('admin_stuff:users')
+    success_url = reverse_lazy('adminapp:users')
     fields = '__all__'
 
     def get_context_data(self, **kwargs):
@@ -93,7 +93,7 @@ class UserCreateView(LoginRequiredMixin, CreateView):
 class UserUpdateView(UpdateView):
     model = ShopUser
     template_name = 'adminapp/user_update.html'
-    success_url = reverse_lazy('admin_stuff:users')
+    success_url = reverse_lazy('adminapp:users')
     form_class = ShopUserAdminEditForm
 
 
@@ -118,7 +118,7 @@ class UserUpdateView(UpdateView):
 class UserDeleteView(DeleteView):
     model = ShopUser
     template_name = 'adminapp/user_delete.html'
-    success_url = reverse_lazy('admin_stuff:users')
+    success_url = reverse_lazy('adminapp:users')
 
     def delete(self, request, *args, **kwargs):
         self.object = self.get_object()
