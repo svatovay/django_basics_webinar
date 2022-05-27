@@ -7,7 +7,6 @@ defusedxml==0.7.1
 Django==4.0.3
 django-environ==0.8.1
 idna==3.3
-MainApp==0.1
 oauthlib==3.2.0
 Pillow==9.1.0
 pycparser==2.21
