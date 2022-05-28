@@ -4,7 +4,7 @@
 {% block content %}
     <div class="categories_list">
         <button class="new_category">
-            <a href={% url 'admin:category_create' %}>
+            <a href={% url 'admin_stuff:category_create' %}>
                 новая категория
             </a>
         </button>
@@ -18,17 +18,17 @@
                 </div>
                 <div class="category_actions">
                     <button>
-                        <a href={% url 'admin:products' object.pk %}>
+                        <a href={% url 'admin_stuff:products' object.pk %}>
                             товары категории
                         </a>
                     </button>
                     <button>
-                        <a href={% url 'admin:category_update' object.pk %}>
+                        <a href={% url 'admin_stuff:category_update' object.pk %}>
                             редактировать
                         </a>
                     </button>
                     <button>
-                        <a href={% url 'admin:category_delete' object.pk %}>
+                        <a href={% url 'admin_stuff:category_delete' object.pk %}>
                             удалить
                         </a>
                     </button>
