@@ -81,7 +81,7 @@ class OrderItem(models.Model):
     def get_product_cost(self):
         return self.product.price * self.quantity
 
-    def delete(self):  # 1way
-        self.product.quantity += self.quantity
-        self.product.save()
-        super(self.__class__, self).delete()
+    # def delete(self):  # 1way
+    #     self.product.quantity += self.quantity
+    #     self.product.save()
+    #     super(self.__class__, self).delete()

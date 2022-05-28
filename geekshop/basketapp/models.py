@@ -43,17 +43,17 @@ class Basket(models.Model):
         _totalcost = sum(list(map(lambda x: x.product_cost, _items)))
         return _totalcost
 
-    @property
-    def delete(self):  # 1way
-        self.product.quantity += self.quantity
-        self.product.save()
-        super(self.__class__, self).delete()
-
-    @property
-    def save(self, *args, **kwargs):  # 1way
-        if self.pk:
-            self.product.quantity -= self.quantity - self.__class__.get_item(self.pk).quantity
-        else:
-            self.product.quantity -= self.quantity
-            self.product.save()
-            super(self.__class__, self).save(*args, **kwargs)
+    # @property
+    # def delete(self):  # 1way
+    #     self.product.quantity += self.quantity
+    #     self.product.save()
+    #     super(self.__class__, self).delete()
+    #
+    # @property
+    # def save(self, *args, **kwargs):  # 1way
+    #     if self.pk:
+    #         self.product.quantity -= self.quantity - self.__class__.get_item(self.pk).quantity
+    #     else:
+    #         self.product.quantity -= self.quantity
+    #         self.product.save()
+    #         super(self.__class__, self).save(*args, **kwargs)
