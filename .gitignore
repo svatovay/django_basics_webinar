@@ -51,3 +51,19 @@ geekshop/ordersapp/migrations/__pycache__/
 geekshop/ordersapp/static/ordersapp/img/
 
 geekshop/geekshop/local_settings.py
+
+geekshop/__pycache__/
+
+geekshop/tmp/
+
+geekshop/geekshop_visualized.png
+
+geekshop/hv_test.py
+
+geekshop/locust_internet_result.txt
+
+geekshop/locust_local_result.txt
+
+geekshop/shop_urls.txt
+
+geekshop/siege_result.txt
