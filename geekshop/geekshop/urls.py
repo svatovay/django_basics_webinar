@@ -20,17 +20,20 @@ from django.conf.urls.static import static
 from .views import index, contacts
 
 urlpatterns = [
-    # path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls),
     path('', index, name='index'),
     path('contacts/', contacts, name='contacts'),
 
     path('products/', include('mainapp.urls', namespace='products')),
     path('auth/', include('authapp.urls', namespace='auth')),
     path('basket/', include('basketapp.urls', namespace='basket')),
-    path('admin/', include('adminapp.urls', namespace='admin')),
+    path('admin_stuff/', include('adminapp.urls', namespace='admin_stuff')),
     path('orders/', include('ordersapp.urls', namespace='orders')),
     path('', include('social_django.urls', namespace='social')),
 ]
 if settings.DEBUG:
+    import debug_toolbar
+
+    urlpatterns += [path('__debug__/', include(debug_toolbar.urls))]
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
