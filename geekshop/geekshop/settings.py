@@ -50,6 +50,8 @@ INSTALLED_APPS = [
     'ordersapp',
 
     'social_django',
+    'debug_toolbar',
+    'template_profiler_panel',
 ]
 
 AUTH_USER_MODEL = 'authapp.ShopUser'
@@ -86,6 +88,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
     'social_django.middleware.SocialAuthExceptionMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 ROOT_URLCONF = 'geekshop.urls'

@@ -49,3 +49,5 @@ geekshop/ordersapp/static/geekshop/img/
 geekshop/ordersapp/migrations/__pycache__/
 
 geekshop/ordersapp/static/ordersapp/img/
+
+geekshop/geekshop/local_settings.py
