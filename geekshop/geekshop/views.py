@@ -1,10 +1,10 @@
 from django.shortcuts import render
 
-from mainapp.models import Product
+from mainapp.views import get_products
 
 
 def index(request):
-    products = Product.objects.filter(is_active=True, category__is_active=True).select_related('category')[:4]
+    products = get_products()
 
     context = {
         'title': 'главная',
