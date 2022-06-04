@@ -90,7 +90,6 @@ def get_same_products(hot_product):
     return same_products
 
 
-@cache_page(3600)
 def products(request, pk=None, page=1):
     title = "Каталог"
     links_menu = get_links_menu()

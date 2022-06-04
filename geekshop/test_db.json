@@ -1,0 +1,130 @@
+[
+  {
+    "model": "sessions.session",
+    "pk": "c4xc1we6vfbk6g2uizqsjs1eh9ga1dw9",
+    "fields": {
+      "session_data": ".eJxVj80OgjAQhN-lZ8UChVJvmhgOJhovemy2f0IgNNqqoPHdLcYYPe7sfjOzD9Tp3qM5mqEJujZTCxdfJdx58DqobGhtVyq4Ucx6fCDlNl4th3vvdyc_qI0NEB8JfnH6zGsVkORfEyAb3Y0LZ2UNLZf2rKOP6qJrE-3X28UY-s9V4KoAUUO1yVIp00zFihmci1TnsSBZQYgmrDASgKbhgpkiTxhVcpxwbgqSYSGC6Sf3bd2C87y1x7r7KfZ9Gz1f3c5ZgQ:1nxOPT:vH2Hb9l4L0ajV_f1_0Q_3pPQ3Q6c00HA6moUlq632HU",
+      "expire_date": "2022-06-18T12:41:23.265"
+    }
+  },
+  {
+    "model": "mainapp.productcategory",
+    "pk": 1,
+    "fields": {
+      "name": "Cтулья",
+      "description": "",
+      "is_active": true
+    }
+  },
+  {
+    "model": "mainapp.productcategory",
+    "pk": 2,
+    "fields": {
+      "name": "Лампы",
+      "description": "",
+      "is_active": true
+    }
+  },
+  {
+    "model": "mainapp.productcategory",
+    "pk": 3,
+    "fields": {
+      "name": "Кресла",
+      "description": "",
+      "is_active": true
+    }
+  },
+  {
+    "model": "mainapp.productcategory",
+    "pk": 4,
+    "fields": {
+      "name": "Диваны",
+      "description": "",
+      "is_active": true
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 1,
+    "fields": {
+      "category": 1,
+      "name": "Удобный стул",
+      "image": "products_images/product-4.jpg",
+      "short_desc": "Нежный ламповый свет",
+      "description": "",
+      "price": "1450.00",
+      "quantity": 0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 2,
+    "fields": {
+      "category": 2,
+      "name": "Лампа сфера",
+      "image": "products_images/product-1.jpg",
+      "short_desc": "Уникальный дизайн",
+      "description": "",
+      "price": "2300.00",
+      "quantity": 20,
+      "is_active": true
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 3,
+    "fields": {
+      "category": 3,
+      "name": "Кресла двойка",
+      "image": "products_images/product-2.jpg",
+      "short_desc": "Удобный стул для всех",
+      "description": "",
+      "price": "7500.00",
+      "quantity": 4,
+      "is_active": true
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 4,
+    "fields": {
+      "category": 2,
+      "name": "Настенная лампа",
+      "image": "products_images/product-2-sm.jpg",
+      "short_desc": "Уникальный дизайн",
+      "description": "",
+      "price": "1230.00",
+      "quantity": 9,
+      "is_active": true
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 5,
+    "fields": {
+      "category": 2,
+      "name": "Настольная лампа",
+      "image": "products_images/product-31.jpg",
+      "short_desc": "Нежный ламповый свет",
+      "description": "",
+      "price": "3000.00",
+      "quantity": 20,
+      "is_active": true
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 6,
+    "fields": {
+      "category": 4,
+      "name": "Удобный диван",
+      "image": "products_images/product-3-sm.jpg",
+      "short_desc": "Удобный стул для всех",
+      "description": "",
+      "price": "50000.00",
+      "quantity": 20,
+      "is_active": true
+    }
+  }
+]
