@@ -62,16 +62,13 @@ class Order(models.Model):
             item.product.quantity += item.quantity
             item.product.save()
 
-        self.is_active = False
-        self.save()
-
 
 class OrderItemQuerySet(models.QuerySet):  # 1way
     def delete(self, *args, **kwargs):
         for object in self:
             object.product.quantity += object.quantity
             object.product.save()
-            super(OrderItemQuerySet, self).delete(*args, **kwargs)
+        super(OrderItemQuerySet, self).delete(*args, **kwargs)
 
 
 class OrderItem(models.Model):
