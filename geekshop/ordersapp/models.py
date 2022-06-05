@@ -38,6 +38,13 @@ class Order(models.Model):
     def __str__(self):
         return f'Текущий заказ: {self.id}'
 
+    def get_summary(self):
+        items = self.orderitems.select_related()
+        return {
+            'total_cost': sum(list(map(lambda x: x.quantity * x.product.price, items))),
+            'total_quantity': sum(list(map(lambda x: x.quantity, items))),
+        }
+
     def get_total_quantity(self):
         items = self.orderitems.select_related()
         return sum(list(map(lambda x: x.quantity, items)))
@@ -55,16 +62,13 @@ class Order(models.Model):
             item.product.quantity += item.quantity
             item.product.save()
 
-        self.is_active = False
-        self.save()
-
 
 class OrderItemQuerySet(models.QuerySet):  # 1way
     def delete(self, *args, **kwargs):
         for object in self:
             object.product.quantity += object.quantity
             object.product.save()
-            super(OrderItemQuerySet, self).delete(*args, **kwargs)
+        super(OrderItemQuerySet, self).delete(*args, **kwargs)
 
 
 class OrderItem(models.Model):
